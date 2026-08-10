@@ -76,17 +76,6 @@ FAST-NUCES/
 
 ---
 
-## 🎓 Academic Information
-
-| Field | Information |
-|-------|-------------|
-| **University** | FAST – National University of Computer and Emerging Sciences (FAST-NUCES) |
-| **Program** | Bachelor of Science in Software Engineering (BSSE) |
-| **Campus** | Karachi |
-| **Repository Purpose** | Educational Coursework |
-
----
-
 <p align="center">
   <i>Maintained as part of my BS Software Engineering journey at FAST-NUCES.</i>
 </p>
