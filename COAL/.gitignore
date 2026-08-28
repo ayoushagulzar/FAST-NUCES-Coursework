@@ -1,0 +1,39 @@
+# ==========================================
+# Visual Studio Auto-Generated & Build Files
+# ==========================================
+
+# Visual Studio cache, local settings, and temporary user files
+.vs/
+*.user
+*.aps
+*.VC.db
+*.VC.opendb
+
+# Build output & binary directories (matches any subfolder like Lab/Lab1/Debug)
+**/[Dd]ebug/
+**/[Rr]elease/
+**/x64/
+**/x86/
+
+# Object & Compiled binary files
+*.obj
+*.ilk
+*.pdb
+*.exe
+*.dll
+*.lib
+
+# Log & Build info files
+*.log
+*.tlog
+*.recipe
+*.FileListAbsolute.txt
+*.dt.d.json
+*.dt.module.json
+*.dt.module.json.command
+
+# ==========================================
+# Common OS Trash
+# ==========================================
+.DS_Store
+Thumbs.db
