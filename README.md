@@ -28,8 +28,8 @@ It contains laboratory exercises, programming assignments, theory assignments, a
 |:--------:|--------|:--------:|:------:|
 | **Fall 2025** | Programming Fundamentals | C | ✅ Completed |
 | **Spring 2026** | Object-Oriented Programming | Java | ✅ Completed |
-| **Fall 2026** | Data Structures & Algorithms | C++ | 🚧 Coming Soon |
-| **Fall 2026** | Computer Organization & Assembly Language (COAL) | Assembly | 🚧 Coming Soon |
+| **Fall 2026** | Data Structures | C++ | In Progress |
+| **Fall 2026** | Computer Organization & Assembly Language (COAL) | Assembly | In progress |
 
 ---
 
@@ -40,7 +40,7 @@ FAST-NUCES/
 ├── README.md
 ├── Programming-Fundamentals/
 ├── OOP-LAB/
-├── DSA/
+├── DS/
 ├── COAL/
 └── ...
 ```
@@ -56,7 +56,7 @@ FAST-NUCES/
 - C
 - C++
 - Java
-- Assembly *(Coming Soon)*
+- Assembly 
 
 ### Tools
 
