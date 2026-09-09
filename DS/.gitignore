@@ -1,0 +1,34 @@
+# Compiled executables
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+
+# Code::Blocks files
+*.depend
+*.layout
+
+# CMake build files
+build/
+cmake-build-*/
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE folders
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
