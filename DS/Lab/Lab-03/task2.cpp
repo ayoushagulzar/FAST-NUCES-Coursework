@@ -7,7 +7,6 @@
 //     5. How many comparisons would standard Bubble Sort perform?
 
 #include <iostream>
-#include <windows.h>
 using namespace std;
 
 static int no_of_passes = 0;
