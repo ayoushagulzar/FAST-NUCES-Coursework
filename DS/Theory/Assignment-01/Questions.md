@@ -1,4 +1,4 @@
-# Data Structures - ASSIGNMENT # 01
+# Data Structures - Assignment # 01
 
 ## Question 01
 
