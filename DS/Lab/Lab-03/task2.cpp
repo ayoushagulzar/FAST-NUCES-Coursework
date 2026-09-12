@@ -86,10 +86,7 @@ int main()
     cout << endl;
 
     cout << "Sorted Array: ";
-    for (int i = 0; i < n; i++)
-    {
-        cout << array2[i] << " ";
-    }
+    printArray(array1, n);
     cout << endl;
 
     cout << "Array become sorted after pass " << no_of_passes << endl;
