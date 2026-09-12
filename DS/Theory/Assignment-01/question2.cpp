@@ -47,17 +47,17 @@ int main()
 {
     int n;
 
-    cout << "Enter the size of the array: ";
+    cout << "Enter number of shelves: ";
     cin >> n;
 
     int *array1 = new int[n];
     for (int i = 0; i < n; i++)
     {
-        cout << "Value " << i + 1 << ": ";
+        cout << "Book capacity of shelf " << i + 1 << ": ";
         cin >> array1[i];
     }
 
-    cout << "Original Array: ";
+    cout << "Original shelf capacities: ";
     printArray(array1, n);
     cout << endl;
 
@@ -94,14 +94,13 @@ int main()
     // Insert new shelf
     array2[position - 1] = new_value;
 
-    cout << "Array after insertion: ";
+    cout << endl;
+    cout << "Shelves after adding new shelf: ";
     printArray(array2, m);
     cout << endl;
 
     insertion_sort(array2, m);
-    cout << endl;
-
-    cout << "Sorted Array: ";
+    cout << "Shelves after sorting: ";
     printArray(array2, m);
     cout << endl;
 
