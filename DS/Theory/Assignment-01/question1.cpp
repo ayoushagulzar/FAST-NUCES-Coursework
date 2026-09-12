@@ -55,7 +55,7 @@ int main()
     int *array = new int[n];
     for (int i = 0; i < n; i++)
     {
-        cout << "Value at index " << i + 1 << ": ";
+        cout << "Enter value " << i + 1 << ": ";
         cin >> array[i];
     }
 
