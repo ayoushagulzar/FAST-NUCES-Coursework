@@ -34,7 +34,7 @@ void comb_sort(int arr[], int n)
         }
 
         count++;
-        cout << "Gap after iteration " << count << ": " << gap << endl;
+        cout << "Gap for iteration " << count << ": " << gap << endl;
 
         swapped = false;
 
