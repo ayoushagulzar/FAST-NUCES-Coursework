@@ -33,5 +33,5 @@ main PROC
 main ENDP
 END main
 
-; NOTE: WriteInt only displays the value of eax.
+
 
