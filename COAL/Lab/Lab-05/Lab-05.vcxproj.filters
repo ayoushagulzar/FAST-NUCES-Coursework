@@ -18,5 +18,43 @@
     <MASM Include="task2.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="task3.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task4.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task5.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task6.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task7.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task8.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task9.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task10.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task11.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task12.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task13.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
