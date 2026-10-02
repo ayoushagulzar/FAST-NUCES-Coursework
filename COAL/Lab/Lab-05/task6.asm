@@ -33,7 +33,6 @@ main PROC
     mov edx , OFFSET msg3
     call WriteString
     call WriteHex
-    call Crlf
 
 	exit
 
