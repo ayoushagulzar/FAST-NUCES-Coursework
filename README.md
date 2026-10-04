@@ -40,7 +40,7 @@ FAST-NUCES/
 ├── README.md
 ├── Programming-Fundamentals/
 ├── OOP-LAB/
-├── DS/
+├── DSA/
 ├── COAL/
 └── ...
 ```
