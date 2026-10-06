@@ -37,6 +37,6 @@ L1:
     call WriteString
     call Crlf
 
-    
+    exit
 main ENDP
 END main
