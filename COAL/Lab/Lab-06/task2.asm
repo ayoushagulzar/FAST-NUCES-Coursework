@@ -5,7 +5,7 @@ INCLUDE Irvine32.inc
 
 .data
     Source BYTE "Ayousha Gulzar", 0
-    Target BYTE 16 DUP (?)
+    Target BYTE 15 DUP (?)
     msg1 BYTE "Source: " , 0
     msg2 BYTE "Target: " , 0
 
@@ -21,8 +21,6 @@ L1:
     inc esi
     inc edi
     loop L1
-
-    mov BYTE PTR [edi], 0
 
     mov edx, OFFSET msg1
     call WriteString
