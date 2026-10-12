@@ -1,4 +1,4 @@
-   ; Write an program that initializes an array named Source containing the string "Hello
+ ; Write an program that initializes an array named Source containing the string "Hello
    ; Assembly!". The task is to copy exactly 15 characters from Source into another array named Target
    ; using only unconditional jumps (JMP) or the LOOP instruction.
    ; The program should:
@@ -40,3 +40,4 @@ L1:
     exit
 main ENDP
 END main
+
