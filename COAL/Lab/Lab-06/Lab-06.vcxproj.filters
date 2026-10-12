@@ -27,6 +27,12 @@
     <MASM Include="task5.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="task6.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="task7.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="task1.asm">
