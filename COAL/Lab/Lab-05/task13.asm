@@ -16,7 +16,7 @@ main PROC
     mov esi , 0
     mov eax , array[esi * TYPE array]
     add esi , 2
-    mov ebx , array[esi * TYPE array]
+    mov ebx , array[esi * TYPE array] 
     add eax , ebx
 
     mov edx , OFFSET msg1
