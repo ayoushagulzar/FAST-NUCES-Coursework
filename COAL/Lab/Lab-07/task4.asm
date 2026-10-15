@@ -31,6 +31,8 @@ printStar PROC
 		call Crlf
 		pop ecx
 	Loop L1
+
+	ret
 	printStar ENDP
 
 END main
