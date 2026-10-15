@@ -25,7 +25,7 @@ L2:
 	add esi , TYPE arr2
 	Loop L2
 
-	mov esi , OFFSET arr2
+	mov esi , OFFSET arr2 
 	mov ecx , LENGTHOF arr2
 L3:
 	movzx eax, WORD PTR [esi]
