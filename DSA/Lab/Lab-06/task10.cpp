@@ -1,0 +1,2 @@
+// A word-search game contains a character grid. Determine whether the word "CAT" exists by moving
+// horizontally or vertically to adjacent cells. A cell cannot be used more than once in the same word path. 
