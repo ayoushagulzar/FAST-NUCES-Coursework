@@ -5,3 +5,10 @@
 //     0 4 1 0
 //     0 1 4 0
 //     4 0 0 1
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+    return 0;
+}

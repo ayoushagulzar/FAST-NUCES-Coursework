@@ -5,3 +5,10 @@
 //   ● Vertices: A, B, C, D
 //   ● Edges: A–B, A–C, B–C, B–D, C–D
 //   ● Available colors: Red, Green, Blue
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+    return 0;
+}
