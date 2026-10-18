@@ -1,4 +1,17 @@
-
+COMMENT!   
+    Welcome to IEEE Xtreme, the world’s most thrilling 24-hour global programming
+    competition organized annually by the IEEE Computer Society. In this event, teams of student
+    programmers from around the world compete simultaneously against the clock to solve complex
+    coding problems, algorithmic challenges, and logic puzzles all within one intense day of non-stop
+    coding!
+    At FAST NUCES Karachi, three brilliant coders Ghulam Qadir, Abdullah Shaikh, and
+    Waseem Rauf are representing their university in this year’s IEEE Xtreme Challenge.
+    Each participant writes as many lines of code as possible while racing against time and bugs.
+    Your task as the system’s “score tracker” is to:
+     Take user input for the number of lines of code each participant completed,
+     Use procedures and stack operations (PUSH/POP) to manage and compare the data,
+     Display the IEEE Xtreme Code Champion who coded the most lines during the
+    competition.!
 
 INCLUDE Irvine32.inc
 
