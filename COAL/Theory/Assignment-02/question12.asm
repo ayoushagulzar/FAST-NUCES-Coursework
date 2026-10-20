@@ -11,7 +11,7 @@ COMMENT!
 INCLUDE Irvine32.inc
 
 .data
-	;using hexadex values
+	;using hexadecimal values
 	x byte 15h
 	y byte 20h
 	z byte 10h
@@ -26,13 +26,13 @@ main PROC
 
 	LWhile:
 		cmp bl , cl
-		jg LExit            ; if op1 > op2: exit while loop
+		ja LExit            ; if op1 > op2: exit while loop
 
 		cmp bl , x          ; if op1 < x, go to else
-		jl LElse
+		jb LElse
 
 		cmp bl , y         ; if op1 > y, go to else
-		jg LElse
+		ja LElse
 
 		add al , 10h       ; z+=10
 		jmp LEndIf
