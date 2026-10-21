@@ -1,4 +1,4 @@
-COMMENT!	
+ COMMENT!	
 	Write an assembly code to shift right and left a Dword (2345ABCDh) as Byte level
 	4times, considering no bit should be lost.!
 
