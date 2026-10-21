@@ -11,12 +11,11 @@ COMMENT!
 INCLUDE Irvine32.inc
 
 .data
-	;using hexadecimal values
-	x byte 15h
-	y byte 20h
-	z byte 10h
-	op1 byte 17h
-	op2 byte 21h
+	x byte 15
+	y byte 20
+	z byte 10
+	op1 byte 17
+	op2 byte 21
 
 .code
 main PROC
@@ -34,19 +33,19 @@ main PROC
 		cmp bl , y         ; if op1 > y, go to else
 		ja LElse
 
-		add al , 10h       ; z+=10
+		add al , 10       ; z+=10
 		jmp LEndIf
 
 	LElse:
-		sub al , 10h      ; z-=10
+		sub al , 10      ; z-=10
 
 	LEndIf:
 		dec bl           ; op1--
 		jmp LWhile
 
 	LExit:
-		mov z , al
-		call DumpRegs
+		movzx eax , al
+		call writeDec
 		exit
 
 main ENDP
