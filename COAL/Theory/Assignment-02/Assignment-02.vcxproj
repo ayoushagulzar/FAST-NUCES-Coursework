@@ -150,11 +150,11 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="question11.asm">
+    <MASM Include="question11.asm">
       <FileType>Document</FileType>
-    </None>
+    </MASM>
     <MASM Include="question12.asm">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

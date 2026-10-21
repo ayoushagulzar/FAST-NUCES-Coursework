@@ -1,52 +1,58 @@
-COMMENT!
-	Implement the following pseudocode in x86 assembly language. All variables are 32-bitsigned integers:
-	if (num1 > num2 && num3 != num4)
-		result = num1 + num3;
-	else if (num2 == num4)
-		result = num2 - num1;
-	else
-		result = 0;!
+;Implement the following pseudocode in x86 assembly language. All variables are 32-bitsigned integers:
+;	if (num1 > num2 && num3 != num4)
+;		result = num1 + num3;
+;	else if (num2 == num4)
+;		result = num2 - num1;
+;	else
+;		result = 0;
 
 INCLUDE Irvine32.inc
 
 .data
 	num1 SDWORD 50
-	num2 SDWORD 50
-	num3 SDWORD 50
-	num4 SDWORD 50
+	num2 SDWORD 25
+	num3 SDWORD 17
+	num4 SDWORD 34
 	result SDWORD ?
 
 
 .code
 main PROC
-	mov al , z
-	mov bl , op1
-	mov cl , op2
+	mov eax , num1
+	mov ebx , num2
+	mov ecx , num3
+	mov edx , num4
 
-	LWhile:
-		cmp bl , cl
-		jg LExit            ; if op1 > op2: exit while loop
+	;checking first condition of if
+	cmp eax , ebx
+	jng ElseIfBlock
 
-		cmp bl , x          ; if op1 < x, go to else
-		jl LElse
+	;checking second condition of if
+	cmp ecx , edx
+	je ElseIfBlock 
 
-		cmp bl , y         ; if op1 > y, go to else
-		jg LElse
+	;when both conditions are true..
+	mov esi , num1
+	add esi , num3
+	mov result , esi
+	jmp LExit
 
-		add al , 10h       ; z+=10
-		jmp LEndIf
+ElseIfBlock:
+	cmp ebx , edx
+	jne ElseBlock
+	mov esi , num2
+	sub esi , num1
+	mov result , esi
+	jmp LExit
 
-	LElse:
-		sub al , 10h      ; z-=10
+ElseBlock:
+	mov result , 0
+	jmp LExit
 
-	LEndIf:
-		dec bl           ; op1--
-		jmp LWhile
-
-	LExit:
-		mov z , al
-		call DumpRegs
-		exit
+LExit:
+	mov eax , result
+	call writeInt
+	exit
 
 main ENDP
 END main
