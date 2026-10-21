@@ -44,3 +44,4 @@ main PROC
 	exit
 
 main ENDP
+END main

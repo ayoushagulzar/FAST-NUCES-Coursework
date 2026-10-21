@@ -37,9 +37,4 @@
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="question6.asm">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
 </Project>
