@@ -27,6 +27,9 @@
     <MASM Include="question1.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="question2.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="question6.asm">

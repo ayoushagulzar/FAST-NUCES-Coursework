@@ -150,7 +150,9 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="question1.asm" />
+    <MASM Include="question1.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </MASM>
     <MASM Include="question11.asm">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -158,6 +160,7 @@
     <MASM Include="question12.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
+    <MASM Include="question2.asm" />
     <None Include="question6.asm">
       <FileType>Document</FileType>
     </None>
