@@ -15,6 +15,7 @@ using namespace std;
 
 static int partitionCount = 0;
 
+// ================== Lomuto partition - last element as pivot =======================
 int partition(int arr[], int start, int end, int n)
 {
     int pivot = arr[end];
