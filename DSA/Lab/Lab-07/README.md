@@ -1,6 +1,6 @@
-# Lab 07 – Sorting Algorithms
+# Lab 07 – Advanced Sorting
 
-This lab focuses on sorting algorithms in C++, covering recursive Merge Sort, Quick Sort with different pivot strategies, and LSD Radix Sort using Counting Sort.
+This lab focuses on advanced sorting algorithms in C++, covering recursive Merge Sort, Quick Sort with different pivot strategies, and LSD Radix Sort using Counting Sort.
 
 ## Topics Covered
 
