@@ -69,7 +69,6 @@ void merge(Parcel arr[], int first, int mid, int last)
         i++;
         k++;
     }
-
     while (j < n2)
     {
         arr[k] = rightArr[j];
