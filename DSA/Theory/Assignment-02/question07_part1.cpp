@@ -1,4 +1,3 @@
-// Question 7:
 // A national logistics enterprise processes 5,000,000 parcels globally every day. Each parcel object
 // contains a unique, non-negative numeric tracking number (ranging from 0 up to 999,999,999), a
 // sender name, a destination city, and a region routing code.
@@ -11,14 +10,6 @@
 // strictly linear time O(n) relative to the number of records. Furthermore, your algorithm must elegantly
 // handle tracking numbers with radically different digit lengths (ranging from 1 digit up to 9 digits)
 // without breaking down or allocating massive, unmanageable blocks of continuous memory.
-
-// Part 2: Regional Code Consolidation
-// Your system must also group parcels by their numeric region routing codes.
-// The Constraints: Due to strict memory caps on our edge-computing servers, your sorting algorithm
-// cannot exceed O(log n) auxiliary space complexity, eliminating heavy array mirroring. However, it
-// must guarantee a predictable worst-case time complexity of O(nlogn) to prevent processing
-// bottlenecks, and it must be stable so that if two parcels share the same regional code, their original
-// sequence remains perfectly intact.
 
 #include <iostream>
 #include <string>  // to use getline in code
