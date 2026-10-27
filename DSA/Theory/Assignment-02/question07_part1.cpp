@@ -33,7 +33,6 @@ struct Parcel
     int regionCode;
 };
 
-// ====================================== PART - 01 ======================================
 void countSort(Parcel arr[], int n, int exp)
 {
     Parcel *output = new Parcel[n];
@@ -79,8 +78,6 @@ void radixSort(Parcel arr[], int n)
         exp *= 10;
     }
 }
-// ====================================== PART - 02 ======================================
-//idk which sort
 
 int main()
 {
