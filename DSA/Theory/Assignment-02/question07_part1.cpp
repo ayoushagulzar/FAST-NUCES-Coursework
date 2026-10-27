@@ -12,7 +12,7 @@
 // without breaking down or allocating massive, unmanageable blocks of continuous memory.
 
 #include <iostream>
-#include <string>  // to use getline in code
+#include <string> 
 #include <iomanip> //for manipulation (using setw function in this code)
 using namespace std;
 
