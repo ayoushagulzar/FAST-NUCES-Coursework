@@ -117,7 +117,7 @@ int main()
         seatCol[i] = -1;
     }
 
-    cout << "All Valid Examination Seating Arrangements\n";
+    cout << "All Valid Examination Seating Arrangements";
     cout << "\n-------------------------------------------\n";
 
     assignSeats(0);
