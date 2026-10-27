@@ -37,7 +37,7 @@ private:
 
         totalSwaps++;
 
-        cout << "Swap index " << i << " and index " << j << ": ";
+        cout << "Swap (index " << i << ", index " << j << "): ";
         displayArray();
     }
 
@@ -85,13 +85,13 @@ private:
         if (left < size)
         {
             cout << "Parent " << heap[index]
-                 << ", left child " << heap[left];
+                 << " <= Left child " << heap[left] << " : ";
 
             if (heap[index] <= heap[left])
-                cout << " -> OK\n";
+                cout << "PASS\n";
             else
             {
-                cout << " -> VIOLATION\n";
+                cout << "FAIL\n";
                 return false;
             }
         }
@@ -99,13 +99,13 @@ private:
         if (right < size)
         {
             cout << "Parent " << heap[index]
-                 << ", right child " << heap[right];
+                 << " <= Right child " << heap[right] << " : ";
 
             if (heap[index] <= heap[right])
-                cout << " -> OK\n";
+                cout << "PASS\n";
             else
             {
-                cout << " -> VIOLATION\n";
+                cout << "FAIL\n";
                 return false;
             }
         }
@@ -113,19 +113,29 @@ private:
         return verify(left) && verify(right);
     }
 
-    void displayTree(int index, int depth)
+    void displayTree()
     {
-        if (index >= size)
-            return;
+        int level = 0;
+        int index = 0;
 
-        displayTree(2 * index + 2, depth + 1);
+        while (index < size)
+        {
+            int nodes = 1;
 
-        for (int i = 0; i < depth; i++)
-            cout << "    ";
+            for (int i = 0; i < level; i++)
+                nodes *= 2;
 
-        cout << heap[index] << '\n';
+            cout << "Level " << level << ": ";
 
-        displayTree(2 * index + 1, depth + 1);
+            for (int i = 0; i < nodes && index < size; i++)
+            {
+                cout << heap[index] << "  ";
+                index++;
+            }
+
+            cout << '\n';
+            level++;
+        }
     }
 
 public:
@@ -140,17 +150,19 @@ public:
             heap[i] = initial[i];
     }
 
-    void partA()
+    void drawTree()
     {
-        cout << "PART (a): Binary tree\n";
-        displayTree(0, 0);
+        cout << "\n========== PART (a): INITIAL MIN-HEAP ==========\n";
 
-        cout << "\nChecking every parent against its children:\n";
+        cout << "\nBinary tree:\n";
+        displayTree();
+
+        cout << "\nMin-heap property verification:\n";
 
         if (verify(0))
-            cout << "The heap satisfies the min-heap property.\n";
+            cout << "\nResult: Valid min-heap.\n";
         else
-            cout << "The heap violates the min-heap property.\n";
+            cout << "\nResult: Invalid min-heap.\n";
     }
 
     void insert(int value)
@@ -158,39 +170,43 @@ public:
         heap[size] = value;
         size++;
 
-        cout << "After inserting " << value << ": ";
+        cout << "\nInsert " << value << '\n';
+        cout << "After insertion: ";
         displayArray();
 
         siftUp(size - 1);
 
-        cout << "Heap after insertion: ";
+        cout << "Final heap: ";
         displayArray();
     }
 
-    void partB()
+    void insertNewJobs()
     {
-        cout << "\nPART (b): Insert 6, then 4\n";
+        cout << "\n========== PART (b): INSERT 6 AND 4 ==========\n";
 
         int swapsBefore = totalSwaps;
 
         insert(6);
         insert(4);
 
-        cout << "Total swaps during both insertions: "
+        cout << "\nTotal swaps: "
              << totalSwaps - swapsBefore << '\n';
+
+        cout << "Final heap: ";
+        displayArray();
     }
 
     int extractMin()
     {
         if (size == 0)
         {
-            cout << "Heap is empty.\n";
+            cout << "Error: Heap is empty.\n";
             return -1;
         }
 
         int minimum = heap[0];
 
-        cout << "\nExtracting minimum: " << minimum << '\n';
+        cout << "\nExtract minimum: " << minimum << '\n';
 
         heap[0] = heap[size - 1];
         size--;
@@ -201,66 +217,68 @@ public:
         if (size > 0)
             siftDown(0);
 
-        cout << "Heap after extractMin: ";
+        cout << "Heap after extraction: ";
         displayArray();
 
         return minimum;
     }
 
-    void partC()
+    void twoExtractMin()
     {
-        cout << "\nPART (c): Two extractMin operations\n";
+        cout << "\n========== PART (c): TWO EXTRACT-MIN OPERATIONS ==========\n";
 
-        cout << "First removed: " << extractMin() << '\n';
-        cout << "Second removed: " << extractMin() << '\n';
+        int first = extractMin();
+        cout << "Removed: " << first << '\n';
+
+        int second = extractMin();
+        cout << "Removed: " << second << '\n';
     }
 
     void decreaseKey(int index, int newValue)
     {
         if (index < 0 || index >= size)
         {
-            cout << "Invalid index.\n";
+            cout << "Error: Invalid index.\n";
             return;
         }
 
         if (newValue > heap[index])
         {
-            cout << "New value must not be greater than old value.\n";
+            cout << "Error: New value is greater than the current value.\n";
             return;
         }
 
-        cout << "\nChanging index " << index
+        cout << "\nChange index " << index
              << " from " << heap[index]
              << " to " << newValue << '\n';
 
         heap[index] = newValue;
 
-        cout << "After changing the key: ";
+        cout << "After changing key: ";
         displayArray();
 
         siftUp(index);
 
-        cout << "Heap after decreaseKey: ";
+        cout << "Final heap: ";
         displayArray();
     }
 
-    void partD()
+    void decreaseKeyAtIndex()
     {
-        cout << "\nPART (d): Decrease key at index 7 to 3\n";
+        cout << "\n========== PART (d): DECREASE KEY ==========\n";
 
         if (heap[7] != 20)
         {
-            cout << "The expected job with deadline 20 "
-                 << "is not at index 7.\n";
+            cout << "Error: Deadline 20 is not at index 7.\n";
             return;
         }
 
         decreaseKey(7, 3);
 
-        cout << "Only sift-up is needed because decreasing "
-             << "a key cannot violate the heap property "
-             << "with its children; it can violate the "
-             << "property with its parent.\n";
+        cout << "\nExplanation:\n";
+        cout << "Only sift-up is required because decreasing a key\n";
+        cout << "can violate the heap property with its parent,\n";
+        cout << "but cannot violate it with its children.\n";
     }
 };
 
@@ -268,10 +286,10 @@ int main()
 {
     MinHeap h;
 
-    h.partA();
-    h.partB();
-    h.partC();
-    h.partD();
+    h.drawTree();
+    h.insertNewJobs();
+    h.twoExtractMin();
+    h.decreaseKeyAtIndex();
 
     return 0;
 }
