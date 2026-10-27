@@ -75,7 +75,6 @@ void mergeSort(Student arr[], int n, int start, int end)
         merge(arr, n, start, mid, end);
     }
 }
-
 int main()
 {
     int n;
@@ -129,9 +128,8 @@ int main()
     }
 
     mergeSort(students, n, 0, n - 1);
+    cout << "\n\n-------------------------------- MERIT LIST -------------------------------------\n";
 
-    cout << "\n\n------------------ MERIT LIST ------------------\n";
-    // left ---> for left align
     cout << left
          << setw(12) << "Student ID"
          << setw(25) << "Student Name"
@@ -139,13 +137,15 @@ int main()
          << setw(10) << "CGPA"
          << "Award" << endl;
 
+    cout << string(80, '-') << endl;
+
     for (int i = 0; i < n; i++)
     {
-        // left ---> for left align
         cout << left
              << setw(12) << students[i].id
              << setw(25) << students[i].name
              << setw(20) << students[i].department
+             << fixed << setprecision(2)
              << setw(10) << students[i].cgpa
              << students[i].award << endl;
     }
