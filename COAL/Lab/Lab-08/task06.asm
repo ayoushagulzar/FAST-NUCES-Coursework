@@ -14,6 +14,8 @@ main PROC
     call WriteString
 
     call ReadChar
+    call WriteChar
+    call Crlf
 
     ; Check uppercase (A-Z)
     cmp al, 'A'
