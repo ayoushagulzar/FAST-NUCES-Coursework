@@ -147,10 +147,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <MASM Include="task-03.asm" />
     <MASM Include="task01.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="task02.asm" />
+    <MASM Include="task02.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </MASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
