@@ -24,5 +24,8 @@
     <MASM Include="task-03.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="task04.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
