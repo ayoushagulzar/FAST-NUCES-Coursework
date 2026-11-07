@@ -4,7 +4,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Lab-09.vcxproj">
+  <Project Path="Lab-09.vcxproj" Id="256d610f-2342-4799-a58b-1270d230b234">
     <Platform Solution="Debug|x64" Project="Win32" />
   </Project>
 </Solution>
