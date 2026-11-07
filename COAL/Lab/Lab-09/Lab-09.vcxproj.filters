@@ -51,5 +51,8 @@
     <MASM Include="task09.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="task13.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
