@@ -170,7 +170,10 @@
     <MASM Include="task10.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="task11.asm" />
+    <MASM Include="task11.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="task12.asm" />
     <None Include="task06.asm">
       <FileType>Document</FileType>
     </None>
