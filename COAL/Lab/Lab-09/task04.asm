@@ -16,7 +16,7 @@ main PROC
     mov num, eax
 
     mov eax, num
-    shl eax, 2
+    shl eax, 2            ; 2 power 2 = 4
 
     mov edx, OFFSET msg2
     call WriteString
