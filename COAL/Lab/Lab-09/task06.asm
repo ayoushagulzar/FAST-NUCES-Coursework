@@ -20,11 +20,11 @@ Multiply PROC
     ; EDX = product
 
     mov edx, 0
-    mov ecx, 32
+    mov ecx, 32    ; processing all 32-bits
 
 L1:
     test ebx, 1   
-    jz SkipAdd     ;cuz multiplier can not be zero.
+    jz SkipAdd     ; if the current multiplier bit is zero, we don't need to add the multiplicand
 
     add edx, eax
 
@@ -40,29 +40,33 @@ Multiply ENDP
 
 main PROC
 
-    ; Display multiplicand
+    ; display multiplicand
     mov edx, OFFSET msg1
     call WriteString
     mov eax, num1
     call WriteDec
     call Crlf
 
-    ; Display multiplier
+    ; display multiplier
     mov edx, OFFSET msg2
     call WriteString
     mov eax, num2
     call WriteDec
     call Crlf
 
-    ; Call multiplication procedure
+    ; call multiplication procedure
     mov eax, num1
     mov ebx, num2
-    call Multiply
+    call Multiply    ;will return edx
 
     ; Display product
+    mov eax, edx
+    push eax
+
     mov edx, OFFSET msg3
     call WriteString
-    mov eax, edx
+
+    pop eax
     call WriteDec
     call Crlf
 
