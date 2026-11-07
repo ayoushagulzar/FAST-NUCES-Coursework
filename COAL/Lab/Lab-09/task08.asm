@@ -9,7 +9,6 @@ INCLUDE Irvine32.inc
 
 .code
 main PROC
-
     mov eax, num1
     sub eax, num2
 
