@@ -47,5 +47,8 @@
     <None Include="task1.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="README.md">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
